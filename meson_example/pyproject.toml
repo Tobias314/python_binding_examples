@@ -1,0 +1,8 @@
+  [project]
+  name = "meson_example"
+  version = "0.0.1"
+
+
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python', 'pybind11']

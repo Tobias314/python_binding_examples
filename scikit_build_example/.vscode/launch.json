@@ -1,0 +1,47 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Current File Python & C++",
+      "type": "pythoncpp",
+      "request": "launch",
+      "pythonConfig": "default",
+      "cppConfig": "default (gdb) Attach",
+    },
+    {
+      "name": "Pytest Python & C++", 
+      "type": "pythoncpp",
+      "request": "launch",
+      "pythonLaunchName": "run_pytest",
+      "cppAttachName": "(gdb) Attach",
+    },
+    {
+      "name": "(gdb) Attach",
+      "type": "cppdbg",
+      "request": "attach",
+      "processId": ""
+    },
+    {
+      "name": "run_pytest",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceRoot}",
+      "args": [
+        "tests/test_orbslam3.py", "-k", "your_test_name"
+      ],
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "PytestTest",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "cwd": "${workspaceRoot}",
+      "args": [
+        "tests/test_orbslam3.py"
+      ],
+      "console": "integratedTerminal"
+    },
+  ]
+}
